@@ -1,0 +1,11 @@
+
+ncload /homedata/gcesana/Calip/REFL1DIR_PARASOL_200510_LMDZ.nc
+
+figure
+m_proj('hammer-aitoff','clongitude',0);
+m_pcolor(longitude,latitude,reflectance)
+m_coast('color','black') ; % pour les cotes continents
+m_grid('xtick', [], 'ytick', []);
+caxis([0 1])
+colorbar;
+shading flat;   

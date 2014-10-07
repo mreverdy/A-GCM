@@ -1,0 +1,9 @@
+status=nf90_create("result.nc",NF90_CLOBBER,ncid)
+status=nf90_def_dim(ncid,"Alt",numyscene,x_dimid)
+!status=nf90_def_var(ncid,"Alt",NF90_REAL,x_dimid,varid1)
+status=nf90_def_var(ncid,"mol",NF90_REAL,x_dimid,varid2)
+status=nf90_enddef(ncid)
+
+!status=nf90_put_var(ncid,varid1,ysceneValues)
+status=nf90_put_var(ncid,varid2,p_mol_355)
+pause
